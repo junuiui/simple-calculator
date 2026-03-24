@@ -1,20 +1,33 @@
 name: Calculator CI
 
+# Trigger
 on:
+  # When push
   push:
     branches: [ "main" ]
+
+  # When pr
   pull_request:
     branches: [ "main" ]
 
+# Do... 
+# job1, job2, ... in Parallel!!
 jobs:
   build-and-test:
+
+    # select Virtual OS
     runs-on: ubuntu-latest
 
+    # Steps 
     steps:
       - name: Checkout code
+
+        # Copy to VOS
         uses: actions/checkout@v4
 
       - name: Set up Node.js
+
+        # install Node.js to VOS
         uses: actions/setup-node@v4
         with:
           node-version: '20'
