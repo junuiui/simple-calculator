@@ -23,12 +23,12 @@ jobs:
       - name: Checkout code
 
         # Copy to VOS
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Node.js
 
         # install Node.js to VOS
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '24'
 
