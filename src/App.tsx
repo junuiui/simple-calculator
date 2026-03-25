@@ -20,7 +20,7 @@ function App() {
       }
       setResult(res);
     } catch (e) {
-      setResult("Error");
+      setResult("Error" + e);
     }
   };
 
